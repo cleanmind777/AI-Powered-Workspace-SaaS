@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { logoutUser } from "../lib/auth";
+import { logoutUser } from "../../lib/auth";
 import {
   LayoutDashboard,
   FileText,

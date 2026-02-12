@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { loginWithEmail, registerWithEmail } from "../lib/auth";
+import { loginWithEmail, registerWithEmail } from "../../lib/auth";
 
 export default function Login() {
   const router = useRouter();
@@ -35,7 +35,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-indigo-500 to-purple-600">
       <div className="bg-white p-8 rounded-xl shadow-xl w-96">
         <h2 className="text-2xl font-bold text-center mb-6">
           {isLogin ? "Login" : "Create Account"}
