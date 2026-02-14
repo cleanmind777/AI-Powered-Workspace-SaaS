@@ -111,68 +111,94 @@ export default function Dashboard() {
         </button>
       </aside>
 
-      {/* ================= MAIN CONTENT ================= */}
-      <main className="flex-1 p-8">
+     {/* ================= MAIN CONTENT ================= */}
+<main className="flex-1 p-8">
+  <h1 className="text-3xl font-bold mb-8">
+    Welcome to Your CollabSpace
+  </h1>
 
-        <h1 className="text-3xl font-bold mb-6">
-          Welcome to Your Workspace
-        </h1>
+  {/* 2 Cards Per Row */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <div className="grid md:grid-cols-3 gap-6">
-
-          {/* Open Workspace */}
-          <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <FileText size={28} className="text-indigo-600 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">
-              Real-Time Workspace
-            </h3>
-            <p className="text-gray-500 text-sm mb-4">
-              Collaborate live with your team in shared documents.
-            </p>
-            <button
-              onClick={handleCreateWorkspace}
-              className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
-            >
-              Open Workspace
-            </button>
-          </div>
-
-          {/* AI Generate */}
-          <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <Sparkles size={28} className="text-purple-600 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">
-              AI Generate
-            </h3>
-            <p className="text-gray-500 text-sm mb-4">
-              Generate intelligent content instantly using Gemini AI.
-            </p>
-            <button
-              onClick={() => router.push("/")}
-              className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
-            >
-              Generate Content
-            </button>
-          </div>
-
-          {/* AI Summarize */}
-          <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <Brain size={28} className="text-pink-600 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">
-              AI Summarize
-            </h3>
-            <p className="text-gray-500 text-sm mb-4">
-              Summarize long paragraphs into concise insights.
-            </p>
-            <button
-              onClick={() => router.push("/")}
-              className="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700"
-            >
-              Summarize Now
-            </button>
-          </div>
-
-        </div>
-      </main>
+    {/* Open Workspace */}
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col justify-between">
+      <div>
+        <FileText size={28} className="text-indigo-600 mb-4" />
+        <h3 className="text-lg font-semibold mb-2">
+          Real-Time Workspace
+        </h3>
+        <p className="text-gray-500 text-sm mb-6">
+          Collaborate live with your team in shared documents.
+        </p>
+      </div>
+      <button
+        onClick={handleCreateWorkspace}
+        className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700"
+      >
+        Open Workspace
+      </button>
     </div>
+
+    {/* AI Generate */}
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col justify-between">
+      <div>
+        <Sparkles size={28} className="text-purple-600 mb-4" />
+        <h3 className="text-lg font-semibold mb-2">
+          AI Generate & Summarize
+        </h3>
+        <p className="text-gray-500 text-sm mb-6">
+          Generate intelligent content instantly using Gemini AI.
+        </p>
+      </div>
+      <button
+        onClick={() => router.push("/")}
+        className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+      >
+        Generate Content
+      </button>
+    </div>
+
+    {/* Checklist */}
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col justify-between">
+      <div>
+        <Brain size={28} className="text-pink-600 mb-4" />
+        <h3 className="text-lg font-semibold mb-2">
+          Your Checklist
+        </h3>
+        <p className="text-gray-500 text-sm mb-6">
+          Get a checklis for your tasks
+        </p>
+      </div>
+      <button
+        onClick={() => router.push("/checklist")}
+        className="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700"
+      >
+        Create Checklist
+      </button>
+    </div>
+
+    {/* Daily Planner */}
+    <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex flex-col justify-between">
+      <div>
+        <Brain size={28} className="text-blue-600 mb-4" />
+        <h3 className="text-lg font-semibold mb-2">
+          Daily Planner
+        </h3>
+        <p className="text-gray-500 text-sm mb-6">
+          Plan and organize your daily tasks.
+        </p>
+      </div>
+      <button
+        onClick={() => router.push("/dailyplanner")}
+        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+      >
+        Open Planner
+      </button>
+    </div>
+
+  </div>
+</main>
+
+</div>
   );
 }

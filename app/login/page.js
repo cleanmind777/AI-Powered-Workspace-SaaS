@@ -26,7 +26,6 @@ export default function Login() {
       }
 
       router.push("/dashboard");
-
     } catch (err) {
       setError(err.message);
     }
@@ -35,24 +34,25 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-indigo-500 to-purple-600">
-      <div className="bg-white p-8 rounded-xl shadow-xl w-96">
-        <h2 className="text-2xl font-bold text-center mb-6">
-          {isLogin ? "Login" : "Create Account"}
+    <div className="min-h-screen flex items-center justify-center bg-gray-200">
+      <div className="bg-white p-10 rounded-xl shadow-lg border border-black w-96">
+
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+          {isLogin ? "Welcome Back" : "Create Account"}
         </h2>
 
         {error && (
-          <p className="text-red-500 text-sm mb-3 text-center">
+          <p className="text-red-500 text-sm mb-4 text-center">
             {error}
           </p>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-5">
 
           <input
             type="email"
             placeholder="Email"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="w-full p-3 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -61,7 +61,7 @@ export default function Login() {
           <input
             type="password"
             placeholder="Password"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="w-full p-3 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -80,7 +80,7 @@ export default function Login() {
           </button>
         </form>
 
-        <p className="mt-4 text-sm text-center">
+        <p className="mt-6 text-sm text-center text-gray-700">
           {isLogin
             ? "Don't have an account?"
             : "Already have an account?"}
