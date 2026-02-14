@@ -38,26 +38,18 @@ CollabAI allows users to:
 
 🏗 Tech Stack
 Frontend
-
-Next.js 16 (App Router)
-
-React
-
-Tailwind CSS
-
-Lucide Icons
+-Next.js 16 (App Router)
+-React
+-Tailwind CSS
+-Lucide Icons
 
 Backend
-
-Next.js API Routes
-
-Firebase Firestore
-
-Firebase Authentication
+-Next.js API Routes
+-Firebase Firestore
+-Firebase Authentication
 
 AI Integration
-
-Google Gemini API
+-Google Gemini API
 
 📁 Folder Structure
 
