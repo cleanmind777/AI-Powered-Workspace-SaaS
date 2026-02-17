@@ -1,102 +1,115 @@
-CollabAI – AI Powered Workspace SaaS
+<div align="center">
 
-An AI-powered real-time collaborative workspace built using Next.js, Firebase & Google Gemini API.
+# ✨ CollabAI
 
-CollabAI allows users to:
+### AI-Powered Real-Time Collaborative Workspace
 
--Create real-time collaborative pages
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Open_App-00C7B7?style=for-the-badge&logo=vercel)](https://final-milestone-saas.vercel.app/login)
 
--Generate AI-powered content
+**[🔗 Open Live App →](https://final-milestone-saas.vercel.app/login)**
 
--Summarize text using Gemini
+---
 
--Plan daily schedules using AI
+*Next.js · Firebase · Google Gemini*
 
--Save task history
+</div>
 
--Manage workspace documents
+---
 
-🌐 Live Features
+## 🌐 Overview
 
-🔐 Authentication (Email/Password)
+**CollabAI** is a modern SaaS workspace that combines **real-time collaboration** with **AI-powered features**. Create pages, generate and summarize content with AI, plan your day, and manage documents—all in one place, synced live via Firestore.
 
-📄 Real-time Workspace (Firestore Live Sync)
+---
 
-✨ AI Content Generation (Gemini)
+## ✨ Features
 
-🧠 AI Summarization
+| Category | Features |
+|----------|----------|
+| **🔐 Auth** | Email/password sign-in, Google sign-in, secure sessions |
+| **📄 Workspace** | Real-time collaborative pages with Firestore live sync |
+| **🤖 AI** | Content generation, summarization, text improvement |
+| **🗓 Planning** | AI daily planner with time & priority |
+| **📋 Tasks** | Checklist generator, task history |
+| **📂 Docs** | Sidebar page management, shareable page links |
+| **☁️ Data** | Firestore storage, per-user data |
 
-🗓 AI Daily Planner
+---
 
-📋 Checklist Generator
+## 🏗 Tech Stack
 
-📂 Sidebar Page Management
+| Layer | Technologies |
+|-------|---------------|
+| **Frontend** | Next.js 16 (App Router), React 19, Tailwind CSS 4, Lucide Icons |
+| **Backend** | Next.js API Routes, Firebase Firestore, Firebase Auth |
+| **AI** | Google Gemini API (Gemini 2.5 Flash) |
 
-🔗 Shareable Page Links
+---
 
-☁️ Firestore Data Storage
+## 🚀 Quick Start
 
-🏗 Tech Stack
-Frontend
--Next.js 16 (App Router)
--React
--Tailwind CSS
--Lucide Icons
+```bash
+# Clone and install
+git clone <your-repo-url>
+cd Final-milestone-saas
+npm install
 
-Backend
--Next.js API Routes
--Firebase Firestore
--Firebase Authentication
+# Configure environment (see .env.example)
+cp .env.example .env.local
+# Edit .env.local with your keys
 
-AI Integration
--Google Gemini API
+# Run locally
+npm run dev
+```
 
-📁 Folder Structure
+Open [http://localhost:3000](http://localhost:3000) and sign in or register.
 
-``` saas_capstone/
-│
+---
+
+## 📁 Project Structure
+
+```
+Final-milestone-saas/
 ├── app/
-│   ├── api/
-│   │   └── ai/
-│   │       ├── planner/
-│   │       │   └── route.js
-│   │       ├── summarize/
-│   │       │   └── route.js
-│   │       └── generate/
-│   │           └── route.js
-│   │
-│   ├── dashboard/
-│   │   └── page.js
-│   │
-│   ├── login/
-│   │   └── page.js
-│   │
-│   ├── page/
-│   │   └── [pageId]/
-│   │       └── page.js
-│   │
-│   ├── dailyplanner/
-│   │   └── page.js
-│   │
-│   ├── checklist/
-│   │   └── page.js
-│   │
-│   ├── layout.js
-│   └── page.js
-│
-├── lib/
-│   ├── firebase.js
-│   ├── auth.js
-│   └── firestore.js
-│
+│   ├── api/ai/           # AI endpoints (generate, summarize, planner, improve)
+│   ├── dashboard/        # Main dashboard
+│   ├── login/            # Auth (login/register)
+│   ├── page/[pageId]/    # Collaborative page editor
+│   ├── dailyplanner/     # AI daily planner
+│   ├── checklist/        # Checklist generator
+│   └── AIEditor/         # AI-assisted editor
+├── components/           # Sidebar, AIEditor, dailyplanner, checklist
+├── lib/                  # Firebase, auth, firestore, pages, tasks
 ├── public/
-│
-├── .env.local
-├── package.json
+├── DOC/                  # Detailed documentation
+│   ├── ARCHITECTURE.md
+│   └── API.md
+├── .env.example
 └── README.md
 ```
-👩‍💻 Developed By
 
--Thanushree Bhat K G
--Madhushri N
--Amulya P Shetty
+---
+
+## 📖 Documentation
+
+Detailed docs live in the **`DOC/`** folder:
+
+- **[ARCHITECTURE.md](DOC/ARCHITECTURE.md)** — System design, data flow, security
+- **[API.md](DOC/API.md)** — AI API endpoints, request/response formats
+
+---
+
+## 🔗 Links
+
+| Link | URL |
+|------|-----|
+| **Live app (login)** | [final-milestone-saas.vercel.app/login](https://final-milestone-saas.vercel.app/login) |
+| **Vercel** | Deploy via Vercel with env vars set |
+
+---
+
+<div align="center">
+
+*Built with Next.js, Firebase & Gemini*
+
+</div>
