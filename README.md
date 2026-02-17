@@ -50,8 +50,8 @@
 
 ```bash
 # Clone and install
-git clone <your-repo-url>
-cd Final-milestone-saas
+git clone https://github.com/cleanmind777/AI-Powered-Workspace-SaaS
+cd AI-Powered-Workspace-SaaS
 npm install
 
 # Configure environment (see .env.example)
@@ -69,7 +69,7 @@ Open [http://localhost:3000](http://localhost:3000) and sign in or register.
 ## 📁 Project Structure
 
 ```
-Final-milestone-saas/
+AI-Powered-Workspace-SaaS/
 ├── app/
 │   ├── api/ai/           # AI endpoints (generate, summarize, planner, improve)
 │   ├── dashboard/        # Main dashboard
